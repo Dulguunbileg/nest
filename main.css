@@ -39,6 +39,7 @@ body {
 .menu-container {
   width: 60%;
   margin: 50px;
+  height: 300px;
 }
 
 .menu-item {
@@ -72,7 +73,7 @@ body {
   transform: translateY(-10px);
 }
 .hamburger:hover + .menu-container {
-  animation: 1s ease-in-out itemAnimation;
+  animation: 10s ease-in-out itemAnimation;
 }
 @keyframes itemAnimation {
   from {
@@ -82,5 +83,31 @@ body {
   to {
     opacity: 1;
     transform: translateX(0px);
+  }
+}
+.menu-item {
+  animation: 4s temAnimation infinite;
+  animation-delay: 3s;
+  width: 60px;
+  height: 50px;
+}
+@keyframes temAnimation {
+  0% {
+    border-left: green solid 1px;
+    border-right: green solid 1px;
+  }
+  25% {
+    background-color: gray;
+    border-top: green dashed 1px;
+  }
+  50% {
+    background-color: aliceblue;
+    border-top: green solid 1px;
+    border-right: green dashed 1px;
+  }
+  100% {
+    border-top: green solid 1px;
+    border-right: green solid 1px;
+    border-left: green solid 1px;
   }
 }

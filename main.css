@@ -39,6 +39,7 @@ body {
 .menu-container {
   width: 60%;
   margin: 50px;
+  height: 300px;
 }
 
 .menu-item {
@@ -72,7 +73,7 @@ body {
   transform: translateY(-10px);
 }
 .hamburger:hover + .menu-container {
-  animation: 1s ease-in-out itemAnimation;
+  animation: 4s ease-in-out itemAnimation;
 }
 @keyframes itemAnimation {
   from {
@@ -84,11 +85,31 @@ body {
     transform: translateX(0px);
   }
 }
-.hamburger:hover + .menu-item {
-  animation: 4s duk;
+
+.menu-item:hover {
+  animation: 2s temAnimation infinite;
+  animation-delay: 3s;
+  width: 60px;
+  height: 50px;
+  cursor: pointer;
 }
-@keyframes duk {
+@keyframes temAnimation {
   0% {
-    margin: 10px;
+    border-left: green solid 1px;
+    border-right: green solid 1px;
+  }
+  25% {
+    background-color: gray;
+    border-top: green dashed 1px;
+  }
+  50% {
+    background-color: aliceblue;
+    border-top: green solid 1px;
+    border-right: green dashed 1px;
+  }
+  100% {
+    border-top: green solid 1px;
+    border-right: green solid 1px;
+    border-left: green solid 1px;
   }
 }

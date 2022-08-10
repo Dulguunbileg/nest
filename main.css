@@ -84,3 +84,11 @@ body {
     transform: translateX(0px);
   }
 }
+.hamburger:hover + .menu-item {
+  animation: 4s duk;
+}
+@keyframes duk {
+  0% {
+    margin: 10px;
+  }
+}

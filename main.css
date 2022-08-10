@@ -42,6 +42,19 @@ body {
   margin: 50px;
   height: 300px;
 }
+.hamburger:hover + .menu-container {
+  animation: 1s ease-in-out item;
+}
+@keyframes item {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 .menu-item1 {
   font-size: 30px;
   color: rgb(196, 202, 255);

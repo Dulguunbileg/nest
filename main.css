@@ -20,6 +20,15 @@ body {
   height: 60px;
   cursor: pointer;
 }
+.hamburger .top {
+  transition-duration: 0.7s;
+}
+.hamburger .bottom {
+  transition-duration: 0.7s;
+}
+.hamburger .middle {
+  transition-duration: 0.7s;
+}
 .bar {
   height: 5px;
   width: 35px;
@@ -28,13 +37,13 @@ body {
   box-shadow: 0px 5px 50px 5px rgb(0, 0, 0);
 }
 .hamburger:hover .top {
-  width: 0px;
+  transform: translateY(15px) rotateZ(45deg);
 }
 .hamburger:hover .bottom {
-  width: 0px;
+  transform: translateY(-15px) rotateZ(-45deg);
 }
 .hamburger:hover .middle {
-  width: 35px;
+  width: 0px;
 }
 
 .menu-container {

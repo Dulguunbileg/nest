@@ -20,6 +20,25 @@ body {
   height: 60px;
   cursor: pointer;
 }
+.topBottomBorderOut div:before,
+.topBottomBorderOut div::after {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  content: "";
+  opacity: 0;
+  transition: all 0.3s;
+}
+.topBottomBorderOut div::before {
+  top: 0px;
+  transform: translateY(30px);
+}
+.topBottomBorderOut div::after {
+  bottom: 0px;
+  transform: translateY(-30px);
+}
 .bar {
   height: 5px;
   width: 35px;
@@ -36,42 +55,70 @@ body {
 .hamburger:hover .middle {
   width: 35px;
 }
+
 .menu-container {
-  width: 60%;
+  width: 60px;
   margin: 50px;
   height: 300px;
-  display: none;
 }
 
-.hamburger:hover + .menu-container {
-  display: flex;
+.menu-item1 {
+  font-size: 30px;
+  color: rgb(196, 202, 255);
+  margin-top: 10px;
+  border-top: white solid 1px;
+  width: 100px;
+  border-bottom: white solid 1px;
 }
-.menu-item:hover {
-  animation: 4s temAnimation ease-in-out;
+.menu-item1:hover {
+  animation: 1s temAnimation;
+  width: 100px;
+  height: 50px;
+}
+.menu-item2 {
+  font-size: 30px;
+  color: rgb(196, 202, 255);
+  margin-top: 30px;
+  border-top: white solid 1px;
+  width: 100px;
+  border-bottom: white solid 1px;
+}
+.menu-item2:hover {
+  animation: 1s temAnimation;
+  width: 100px;
+  height: 50px;
+}
 
-  width: 60px;
+.menu-item3 {
+  font-size: 30px;
+  color: rgb(196, 202, 255);
+  margin-top: 30px;
+  border-top: white solid 1px;
+  width: 100px;
+  border-bottom: white solid 1px;
+}
+.menu-item3:hover {
+  animation: 1s temAnimation;
+  width: 100px;
   height: 50px;
 }
 @keyframes temAnimation {
   0% {
-    border-left: green solid 1px;
-    border-right: green solid 1px;
-    margin-left: 1px;
+    border-top: rgb(255, 255, 255) solid 1px;
+    border-bottom: rgb(255, 255, 255) solid 1px;
   }
   25% {
-    background-color: gray;
-    border-top: green dashed 1px;
-    margin-left: 2px;
+    background-color: rgb(221, 221, 221);
+    border-top: rgb(255, 255, 255) solid 1px;
+    border-bottom: white solid 1px;
   }
   50% {
     background-color: aliceblue;
-    border-top: green solid 1px;
-    border-right: green dashed 1px;
-    margin-left: 5px;
+    border-top: rgb(255, 255, 255) solid 1px;
+    border-bottom: rgb(255, 255, 255) solid 1px;
   }
   100% {
-    border-top: green solid 1px;
-    border-right: green solid 1px;
-    border-left: green solid 1px;
+    border-top: rgb(255, 255, 255) solid 1px;
+    border-bottom: rgb(255, 255, 255) solid 1px;
   }
 }

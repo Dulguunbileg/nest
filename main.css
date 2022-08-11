@@ -5,6 +5,8 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: rgb(103, 103, 140);
+  display: flex;
+  flex-direction: row;
 }
 .navigation {
   padding: 20px;
@@ -20,6 +22,15 @@ body {
   height: 60px;
   cursor: pointer;
 }
+.hamburger .top {
+  transition-duration: 0.7s;
+}
+.hamburger .bottom {
+  transition-duration: 0.7s;
+}
+.hamburger .middle {
+  transition-duration: 0.7s;
+}
 .bar {
   height: 5px;
   width: 35px;
@@ -33,26 +44,11 @@ body {
 .hamburger:hover .bottom {
   transform: translateY(-15px) rotateZ(-45deg);
 }
-.hamburger:hover .middle {
-  width: 0;
-}
+
 .menu-container {
   width: 60%;
   margin: 50px;
   height: 300px;
-}
-.hamburger:hover + .menu-container {
-  animation: 2s ease-in-out itemAnimation;
-}
-@keyframes itemAnimation {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
 }
 .menu-item1 {
   font-size: 30px;
@@ -113,4 +109,73 @@ body {
     border-top: rgb(255, 255, 255) solid 1px;
     border-bottom: rgb(255, 255, 255) solid 1px;
   }
+}
+.layout{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 3fr 2fr 3fr;
+  grid-template-areas:
+    "header header hed"
+    "main1 main hed"
+    "footer footer hed1";
+}
+.header{
+  grid-area:header;
+
+}
+.hed{
+  grid-area: hed;
+
+
+}
+.footer{
+    grid-area: footer;
+ 
+
+
+}
+.main1{
+  grid-area:main1;
+  
+
+  
+}
+.main{
+    grid-area: main;
+
+}
+.hed1{
+    grid-area: hed1;
+
+  
+}
+.header:hover{
+
+box-shadow: 0px 5px 50px 5px rgb(0, 0, 0);
+}
+.hed:hover{
+
+box-shadow: 0px 5px 50px 5px rgb(0, 0, 0);
+
+}
+.footer:hover{
+  
+ 
+box-shadow: 0px 5px 50px 5px rgb(0, 0, 0);
+
+}
+.main1:hover{
+  
+  
+box-shadow: 0px 5px 50px 5px rgb(0, 0, 0);
+  
+}
+.main:hover{
+
+box-shadow: 0px 5px 50px 5px rgb(0, 0, 0);
+}
+.hed1:hover{
+
+box-shadow: 0px 5px 50px 5px rgb(0, 0, 0);
+  
 }

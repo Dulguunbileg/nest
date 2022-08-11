@@ -51,8 +51,18 @@ body {
   margin: 50px;
   height: 300px;
 }
-.hamburger:hover + .menu-container {
+/* .hamburger:hover + .menu-container {
   animation: 1s ease-in-out item;
+} */
+.hamburger:hover + .menu-container .menu-item1 {
+  animation: 0.5s ease-in-out item;
+}
+.hamburger:hover + .menu-container .menu-item2 {
+  animation: 1s ease-in-out item;
+}
+.hamburger:hover + .menu-container .menu-item3 {
+  animation-delay: 1s;
+  animation: 1.5s ease-in-out item;
 }
 @keyframes item {
   from {

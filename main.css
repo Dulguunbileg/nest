@@ -1,8 +1,7 @@
 body {
   margin: 0;
 }
-.container{
-
+.container {
   width: 100vw;
   height: 100vh;
   background-color: rgb(103, 103, 140);
@@ -16,27 +15,24 @@ body {
   height: 100vh;
   background-color: rgb(49, 45, 82);
   transform: translateX(-500px);
-  transition: all 250ms ease-in-out;
+  transition: all 650ms ease-in-out;
 }
-.checkbox:checked ~ .navigation{
+.checkbox:checked ~ .navigation {
   transform: translateX(0);
-  
 }
-.checkbox:checked{
- 
- left: 50px;
- width: 60px;
+.checkbox:checked {
+  left: 50px;
+  width: 60px;
   height: 60px;
   opacity: 0;
-  
 }
 
-.checkbox{
+.checkbox {
   opacity: 0;
- position: absolute;
- 
+  position: absolute;
+
   z-index: 100;
-  width:1000px;
+  width: 1000px;
   height: 1000px;
 }
 
@@ -45,7 +41,7 @@ body {
   width: 60px;
   height: 60px;
   cursor: pointer;
-    z-index: 99;
+  z-index: 99;
 }
 .hamburger .top {
   transition-duration: 0.7s;
@@ -99,71 +95,270 @@ body {
 }
 .menu-item1 {
   font-size: 30px;
-  color: rgb(196, 202, 255);
+  color: rgb(228, 227, 225);
   margin-top: 10px;
-  border-top: white solid 1px;
+  border-left: rgb(0, 0, 0) solid 1px;
+  border-right: rgb(0, 0, 0) solid 1px;
   width: 100px;
-  border-bottom: white solid 1px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.border-item1 {
+  height: 10px;
+  width: 100px;
+  position: absolute;
+}
+.border1-item1 {
+  height: 10px;
+  width: 100px;
+  margin-top: 8px;
+  position: absolute;
+}
+.menu-item1:hover > .border-item1 {
+  animation: 4s temAnimation linear;
+}
+.menu-item1:hover > .border1-item1 {
+  animation: 4s temAnimations linear;
 }
 .menu-item1:hover {
-  animation: 1s temAnimation;
-  width: 100px;
-  height: 50px;
+  animation: 4s anime linear;
 }
+@keyframes anime {
+  to {
+    background-color: rgb(228, 227, 225);
+  }
+  from {
+    background-color: azure;
+  }
+}
+
+@keyframes temAnimation {
+  0% {
+    background-color: rgb(228, 227, 225);
+    top: 76px;
+  }
+  25% {
+    background-color: rgb(228, 227, 225);
+    top: 80px;
+  }
+  50% {
+    background-color: rgb(228, 227, 225);
+    top: 86px;
+  }
+
+  75% {
+    background-color: rgb(228, 227, 225);
+    top: 97px;
+  }
+  100% {
+    background-color: rgb(228, 227, 225);
+    top: 105px;
+  }
+}
+@keyframes temAnimations {
+  0% {
+    background-color: rgb(228, 227, 225);
+    bottom: 740px;
+  }
+  25% {
+    background-color: rgb(228, 227, 225);
+    bottom: 755px;
+  }
+  50% {
+    background-color: rgb(228, 227, 225);
+    bottom: 768px;
+  }
+
+  75% {
+    background-color: rgb(228, 227, 225);
+    bottom: 779px;
+  }
+  100% {
+    background-color: rgb(228, 227, 225);
+    bottom: 783px;
+  }
+}
+
 .menu-item2 {
   font-size: 30px;
-  color: rgb(196, 202, 255);
-  margin-top: 30px;
-  border-top: white solid 1px;
-  width: 100px;
-  border-bottom: white solid 1px;
-}
-.menu-item2:hover {
-  animation: 1s temAnimation;
+  color: rgb(228, 227, 225);
+  margin-top: 10px;
+  border-left: rgb(0, 0, 0) solid 1px;
+  border-right: rgb(0, 0, 0) solid 1px;
   width: 100px;
   height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.border2-item {
+  height: 10px;
+  width: 100px;
+  position: absolute;
+}
+.border2-item1 {
+  height: 10px;
+  width: 100px;
+  margin-top: 8px;
+  position: absolute;
+}
+.menu-item2:hover > .border2-item {
+  animation: 4s temAnimation1 linear;
+}
+.menu-item2:hover > .border2-item1 {
+  animation: 4s temAnimations1 linear;
+}
+.menu-item2:hover {
+  animation: 4s anime1 linear;
+}
+@keyframes anime1 {
+  to {
+    background-color: rgb(228, 227, 225);
+  }
+  from {
+    background-color: azure;
+  }
+}
+
+@keyframes temAnimation1 {
+  0% {
+    background-color: rgb(228, 227, 225);
+    top: 140px;
+  }
+  25% {
+    background-color: rgb(228, 227, 225);
+    top: 145px;
+  }
+  50% {
+    background-color: rgb(228, 227, 225);
+    top: 149px;
+  }
+
+  75% {
+    background-color: rgb(228, 227, 225);
+    top: 156px;
+  }
+  100% {
+    background-color: rgb(228, 227, 225);
+    top: 160px;
+  }
+}
+@keyframes temAnimations1 {
+  0% {
+    background-color: rgb(228, 227, 225);
+    bottom: 683px;
+  }
+  25% {
+    background-color: rgb(228, 227, 225);
+    bottom: 686px;
+  }
+  50% {
+    background-color: rgb(228, 227, 225);
+    bottom: 690px;
+  }
+
+  75% {
+    background-color: rgb(228, 227, 225);
+    bottom: 700px;
+  }
+  100% {
+    background-color: rgb(228, 227, 225);
+    bottom: 719px;
+  }
 }
 
 .menu-item3 {
   font-size: 30px;
-  color: rgb(196, 202, 255);
-  margin-top: 30px;
-  border-top: white solid 1px;
-  width: 100px;
-  border-bottom: white solid 1px;
-}
-.menu-item3:hover {
-  animation: 1s temAnimation;
+  color: rgb(228, 227, 225);
+  margin-top: 10px;
+  border-left: rgb(0, 0, 0) solid 1px;
+  border-right: rgb(0, 0, 0) solid 1px;
   width: 100px;
   height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
-@keyframes temAnimation {
+.border3-item {
+  height: 10px;
+  width: 100px;
+  position: absolute;
+}
+.border3-item1 {
+  height: 10px;
+  width: 100px;
+  margin-top: 8px;
+  position: absolute;
+}
+.menu-item3:hover > .border3-item {
+  animation: 4s temAnimation2 linear;
+}
+.menu-item3:hover > .border3-item1 {
+  animation: 4s temAnimations2 linear;
+}
+.menu-item3:hover {
+  animation: 4s anime2 linear;
+}
+@keyframes anime2 {
+  to {
+    background-color: rgb(228, 227, 225);
+  }
+  from {
+    background-color: azure;
+  }
+}
+
+@keyframes temAnimation2 {
   0% {
-    border-top: rgb(255, 255, 255) solid 1px;
-    border-bottom: rgb(255, 255, 255) solid 1px;
+    background-color: rgb(228, 227, 225);
+    top: 180px;
   }
   25% {
-    background-color: rgb(221, 221, 221);
-    border-top: rgb(255, 255, 255) solid 1px;
-    border-bottom: white solid 1px;
+    background-color: rgb(228, 227, 225);
+    top: 185px;
   }
   50% {
-    background-color: aliceblue;
-    border-top: rgb(255, 255, 255) solid 1px;
-    border-bottom: rgb(255, 255, 255) solid 1px;
+    background-color: rgb(228, 227, 225);
+    top: 187px;
+  }
+
+  75% {
+    background-color: rgb(228, 227, 225);
+    top: 190px;
   }
   100% {
-    border-top: rgb(255, 255, 255) solid 1px;
-    border-bottom: rgb(255, 255, 255) solid 1px;
+    background-color: rgb(228, 227, 225);
+    top: 200px;
+  }
+}
+@keyframes temAnimations2 {
+  0% {
+    background-color: rgb(228, 227, 225);
+    bottom: 630px;
+  }
+  25% {
+    background-color: rgb(228, 227, 225);
+    bottom: 635px;
+  }
+  50% {
+    background-color: rgb(228, 227, 225);
+    bottom: 648px;
+  }
+
+  75% {
+    background-color: rgb(228, 227, 225);
+    bottom: 655px;
+  }
+  100% {
+    background-color: rgb(228, 227, 225);
+    bottom: 660px;
   }
 }
 .layout {
   display: grid;
-  grid-template-columns: 3fr 2fr 3fr;
-  grid-template-rows: 3fr 2fr 3fr;
-
-  justify-content: center;
-  grid-template-columns: 30% 20% 20%;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 30% 20% 30%;
 
   grid-template-areas:

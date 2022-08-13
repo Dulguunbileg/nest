@@ -1,0 +1,90 @@
+.menu-container {
+  width: 60%;
+  margin: 50px;
+  height: 300px;
+}
+.menu-item1 {
+  font-size: 30px;
+  color: rgb(196, 202, 255);
+  margin-top: 10px;
+  border-left: rgb(0, 0, 0) solid 1px;
+  border-right: rgb(0, 0, 0) solid 1px;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+}
+.border-item1 {
+  height: 10px;
+  width: 100px;
+  position: absolute;
+}
+.border1-item1 {
+  height: 10px;
+  width: 100px;
+  margin-top: 8px;
+  position: absolute;
+}
+.menu-item1:hover > .border-item1 {
+  animation: 4s temAnimation linear;
+}
+.menu-item1:hover > .border1-item1 {
+  animation: 4s temAnimations linear;
+}
+.menu-item1:hover {
+  animation: 4s anime linear;
+}
+@keyframes anime {
+  to {
+    background-color: rgb(228, 227, 225);
+  }
+  from {
+    background-color: azure;
+  }
+}
+
+@keyframes temAnimation {
+  0% {
+    background-color: rgb(228, 227, 225);
+    top: 44px;
+  }
+  25% {
+    background-color: rgb(228, 227, 225);
+    top: 47px;
+  }
+  50% {
+    background-color: rgb(228, 227, 225);
+    top: 50px;
+  }
+
+  75% {
+    background-color: rgb(228, 227, 225);
+    top: 53px;
+  }
+  100% {
+    background-color: rgb(228, 227, 225);
+    top: 57px;
+  }
+}
+@keyframes temAnimations {
+  0% {
+    background-color: rgb(228, 227, 225);
+    bottom: 422px;
+  }
+  25% {
+    background-color: rgb(228, 227, 225);
+    bottom: 425px;
+  }
+  50% {
+    background-color: rgb(228, 227, 225);
+    bottom: 428px;
+  }
+
+  75% {
+    background-color: rgb(228, 227, 225);
+    bottom: 431px;
+  }
+  100% {
+    background-color: rgb(228, 227, 225);
+    bottom: 434px;
+  }
+}
